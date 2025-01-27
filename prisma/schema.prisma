@@ -104,3 +104,7 @@ model calendar {
   profile    profile  @relation(fields: [profile_id], references: [id], onDelete: Cascade)
   house      house    @relation(fields: [house_id], references: [id], onDelete: Cascade)
 }
+
+model refresh {
+  id         Int      @id @default(autoincrement())
+}
