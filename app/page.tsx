@@ -123,7 +123,7 @@ export default async function Home() {
             <a href="/#start">Start</a>
             <a href="/#about">O nas</a>
             <a href="/#functions">Funkcje</a>
-            <a href="/#faq">Funkcje</a>
+            <a href="/#faq">FAQ</a>
 
           </div>
 
