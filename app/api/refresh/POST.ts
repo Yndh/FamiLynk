@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 import type { NextApiResponse } from "next";
 
-export async function mGET(_req: Request, _res: NextApiResponse) {
+export async function mPOST(_req: Request, _res: NextApiResponse) {
   console.info("REFRESH START");
   let record;
   try {
