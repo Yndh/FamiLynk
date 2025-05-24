@@ -4,9 +4,10 @@ import type { NextApiResponse } from "next";
 
 export async function mGET(_req: Request, _res: NextApiResponse) {
   console.info("REFRESH START");
+  let record;
   try {
     await prisma.refresh.deleteMany({});
-    await prisma.refresh.create({
+    record = await prisma.refresh.create({
       data: {},
     });
   } catch (e) {
@@ -14,7 +15,7 @@ export async function mGET(_req: Request, _res: NextApiResponse) {
     return new NextResponse(JSON.stringify(false));
   }
   console.info("REFRESH DONE");
-  return new NextResponse(JSON.stringify(true), {
+  return new NextResponse(JSON.stringify(record.random), {
     status: 200,
   });
 }
