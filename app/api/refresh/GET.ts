@@ -1,16 +1,13 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 import type { NextApiResponse } from "next";
-import { randomUUID } from "crypto";
 
 export async function mGET(_req: Request, _res: NextApiResponse) {
   console.info("REFRESH START");
   try {
     await prisma.refresh.deleteMany({});
     await prisma.refresh.create({
-      data: {
-        random: randomUUID(),
-      },
+      data: {},
     });
   } catch (e) {
     console.error("REFRESH QUERY ERROR", e);

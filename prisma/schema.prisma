@@ -107,5 +107,5 @@ model calendar {
 
 model refresh {
   id         Int      @id @default(autoincrement())
-  random     String
+  random     String   @default(cuid())
 }
