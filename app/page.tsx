@@ -1,17 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./landing.css";
-import {
-  faQuestion,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faQuestion, faUser } from "@fortawesome/free-solid-svg-icons";
 import AppFunctions from "./components/appFunctions";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import FAQ from "./components/faq";
 import { getServerSession } from "next-auth";
 
 export default async function Home() {
-
-  const session = await getServerSession()
+  const session = await getServerSession();
 
   return (
     <main className="landingContainer" id="start">
@@ -33,32 +29,40 @@ export default async function Home() {
           <li>
             <a href="/#faq">FAQ</a>
           </li>
-          {
-            session ? <li>
+          {session ? (
+            <li>
               <a href="/app">
                 <button>panel domów</button>
               </a>
-            </li> : <><li>
-              <a href="/login">
-                <button>Zaloguj sie</button>
-              </a>
             </li>
+          ) : (
+            <>
+              <li>
+                <a href="/login">
+                  <button>Zaloguj sie</button>
+                </a>
+              </li>
               <li>
                 <a href="/register">
                   <button>Zarejestruj sie</button>
                 </a>
               </li>
             </>
-          }
+          )}
         </ul>
       </header>
 
       <div className="heroContainer">
         <h1>Twoje rodzinne centrum organizacji</h1>
-        {
-          session ? <a href="/app"><button>Sprawdź FamiLynk</button></a> :
-            <a href="/login"><button>Sprawdź FamiLynk</button></a>
-        }
+        {session ? (
+          <a href="/app">
+            <button>Sprawdź FamiLynk</button>
+          </a>
+        ) : (
+          <a href="/login">
+            <button>Sprawdź FamiLynk</button>
+          </a>
+        )}
         <img src="/houseBaner.svg" alt="" />
       </div>
 
@@ -82,9 +86,9 @@ export default async function Home() {
             <p>
               Stworzyliśmy FamiLynk z przekonaniem, że każda rodzina zasługuje
               na wyjątkowe narzędzie, które uprości jej życie i uczyni je
-              bardziej zorganizowanym. Nasza aplikacja powstała z myślą
-              o tych, którzy pragną spędzać więcej czasu z rodziną i mniej czasu
-              na zawiłościach organizacyjnych.
+              bardziej zorganizowanym. Nasza aplikacja powstała z myślą o tych,
+              którzy pragną spędzać więcej czasu z rodziną i mniej czasu na
+              zawiłościach organizacyjnych.
             </p>
           </div>
 
@@ -124,7 +128,6 @@ export default async function Home() {
             <a href="/#about">O nas</a>
             <a href="/#functions">Funkcje</a>
             <a href="/#faq">FAQ</a>
-
           </div>
 
           <div className="links">
@@ -137,16 +140,15 @@ export default async function Home() {
             <p>Autorzy</p>
             <a href="https://github.com/Yndh">Yndh</a>
             <a href="https://github.com/Qlesuga">Qłesuga</a>
-            <a href="https://github.com/MarcinSzablak">JerzTuptus</a>
-            <a href="https://github.com/IB2R5IMarcinSzablak">IB2R5</a>
+            <a href="https://github.com/JerzT">JerzTuptus</a>
+            <a href="https://github.com/IB2R5I">IB2R5</a>
           </div>
-
-
-
         </div>
         <div className="footerCol">
           <div className="socialRow">
-            <a href="https://github.com/Yndh/hakhiros" className="social"><FontAwesomeIcon icon={faGithub} /></a>
+            <a href="https://github.com/Yndh/hakhiros" className="social">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
           </div>
           <p>&copy;Copyright All right reserved</p>
         </div>

@@ -37,7 +37,6 @@ Aplikacja FamiLynk została zbudowana przy użyciu kluczowych technologii i bibl
 - [react-toastify](https://fkhadra.github.io/react-toastify): Wyświetla powiadomienia w aplikacji.
 - [dockera](https://docs.docker.com): konteneryzacja aplikacji
 
-
 ## Instalacja
 
 1. Sklonuj repozytorium:
@@ -47,14 +46,18 @@ $ git clone https://github.com/Yndh/hakhiros.git
 $ cd hakhiros
 ```
 
-2. Zainstaluj [dockera](https://docs.docker.com/engine/install/) 
+2. Zainstaluj [dockera](https://docs.docker.com/engine/install/)
 
-3. Uruchom aplikację 
-* bez hot-reload'a
+3. Uruchom aplikację
+
+- bez hot-reload'a
+
 ```bash
 $ docker compose up --build
 ```
-* z hot-reload'en
+
+- z hot-reload'en
+
 ```bash
 docker compose watch
 ```
@@ -66,9 +69,11 @@ docker compose watch
 3. Korzystaj z różnych modułów aplikacji, takich jak kalendarz, notatki, obowiązki i przepisy.
 
 ## Autorzy
+
 <p align="center">
 <img src="https://github.com/Yndh.png?size=60" alt="Yndh" href="https://github.com/Yndh">
-<img src="https://github.com/Qlesuga.png?size=60" alt="Qlesuga" href="https://github.com/Qlesuga">
-<img src="https://github.com/MarcinSzablak.png?size=60" alt="MarcinSzablak" href="https://github.com/MarcinSzablak">
+<img src="https://github.com/Qlesuga.png?size=60" alt="Qłesuga" href="https://github.com/Qlesuga">
+<img src="https://github.com/JerzT.png?size=60" alt="JerzT" href="https://github.com/JerzT">
 <img src="https://github.com/IB2R5I.png?size=60" alt="IB2R5" href="https://github.com/IB2R5I">
 </p>
+
